@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>타자기</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #paper {
+      display: block;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #000;
+      width: 80%;
+      height: 150px;
+      overflow-y: auto;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    .keyboard_eng, .keyboard_kor {
+      display: none;
+    }
+
+    .keyboard_eng.active, .keyboard_kor.active {
+      display: block;
+      margin: 10px auto;
+      width: fit-content;
+    }
+
+    .keyboard_eng div, .keyboard_kor div {
+      margin: 5px;
+    }
+
+    label {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 2px;
+      border: 1px solid #ccc;
+      line-height: 40px;
+      cursor: default;
+      transition: background-color 0.2s;
+    }
+
+    /* 키보드 그룹별 색상 */
+    .숫자 label {
+      background-color: #ffdddd;
+    }
+
+    .영어1 label, .한글1 label {
+      background-color: #ddffdd;
+    }
+
+    .영어2 label, .한글2 label {
+      background-color: #ddddff;
+    }
+
+    .영어3 label, .한글3 label {
+      background-color: #ffffcc;
+    }
+
+    /* 키 반짝이기 효과 */
+    .highlight {
+      background-color: gold !important;
+    }
+
+     /* 한/영 모드 표시 */
+    #mode-label-eng, #mode-label-kor {
+      background-color: #aaaaff;
+      font-weight: bold;
+    }
+    
+    /* .블록 기능키 강조*/
+    #toggleKey {
+      border: 2px solid red;
+     border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <label id="paper">빅데이터과, 2402198, 이진서<br></label>
+
+  <div class="keyboard_eng active" id="eng">
+    <div class="숫자">
+      <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
+    </div>
+    <div class="영어1">
+      <label>q</label><label>w</label><label>e</label><label>r</label>
+      <label>t</label><label>y</label>
+      <label>u</label><label>i</label><label>o</label><label>p</label>
+    </div>
+    <div class="영어2">
+      <label>a</label><label>s</label><label>d</label><label>f</label>
+      <label>g</label><label>h</label>
+      <label>j</label><label>k</label><label>l</label>
+    </div>
+    <div class="영어3">
+      <label>z</label><label>x</label><label>c</label><label>v</label>
+      <label>b</label><label>n</label>
+      <label>m</label><label>,</label><label id="toggleKey">.</label>
+      <label id="mode-label-eng">영</label>
+    </div>
+  </div>
+
+  <div class="keyboard_kor" id="kor">
+    <div class="숫자">
+      <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
+    </div>
+    <div class="한글1">
+      <label>ㅂ</label><label>ㅈ</label><label>ㄷ</label><label>ㄱ</label>
+      <label>ㅅ</label><label>ㅛ</label>
+      <label>ㅕ</label><label>ㅑ</label><label>ㅐ</label><label>ㅔ</label>
+    </div>
+    <div class="한글2">
+      <label>ㅁ</label><label>ㄴ</label><label>ㅇ</label><label>ㄹ</label>
+      <label>ㅎ</label><label>ㅗ</label>
+      <label>ㅓ</label><label>ㅏ</label><label>ㅣ</label>
+    </div>
+    <div class="한글3">
+      <label>ㅋ</label><label>ㅌ</label><label>ㅊ</label><label>ㅍ</label>
+      <label>ㅠ</label><label>ㅜ</label>
+      <label>ㅡ</label><label>,</label><label id="toggleKey">.</label>
+      <label id="mode-label-kor">한</label>
+    </div>
+  </div>
+
+  <script>
+    let isKorean = false;
+
+    const paper = document.getElementById("paper");
+    const eng = document.getElementById("eng");
+    const kor = document.getElementById("kor");
+    const modeDisplay = document.getElementById("mode-display");
+
+    const korMap = {
+      q: 'ㅂ', w: 'ㅈ', e: 'ㄷ', r: 'ㄱ', t: 'ㅅ', y: 'ㅛ', u: 'ㅕ', i: 'ㅑ', o: 'ㅐ', p: 'ㅔ',
+      a: 'ㅁ', s: 'ㄴ', d: 'ㅇ', f: 'ㄹ', g: 'ㅎ', h: 'ㅗ', j: 'ㅓ', k: 'ㅏ', l: 'ㅣ',
+      z: 'ㅋ', x: 'ㅌ', c: 'ㅊ', v: 'ㅍ', b: 'ㅠ', n: 'ㅜ', m: 'ㅡ', ',': ',', '.': '.'
+    };
+
+    function toggleLanguage() {
+      isKorean = !isKorean;
+      eng.classList.toggle("active", !isKorean);
+      kor.classList.toggle("active", isKorean);
+      modeLabelEng.style.display = isKorean ? "none" : "inline-block";
+      modeLabelKor.style.display = isKorean ? "inline-block" : "none";
+    }
+
+    document.addEventListener("keydown", (e) => {
+      const key = e.key.toLowerCase();
+
+      // '.' 키로 한/영 전환
+      if (key === '.') {
+        toggleLanguage();
+        return;
+      }
+
+      let typedChar = '';
+
+      if (isKorean && korMap[key]) {
+        typedChar = korMap[key];
+      } else if (!isKorean && key.length === 1 && key.match(/[a-z0-9,]/)) {
+        typedChar = key;
+      } else if (!isKorean && key === '.') {
+        typedChar = '.';
+      }
+
+      if (typedChar) {
+        paper.innerHTML += typedChar;
+
+        // 눌린 키 반짝이기
+        const labels = document.querySelectorAll(`.keyboard_${isKorean ? 'kor' : 'eng'} label`);
+        const target = Array.from(labels).find(label => label.innerText === typedChar);
+        if (target) {
+          target.classList.add("highlight");
+          setTimeout(() => target.classList.remove("highlight"), 200);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
