@@ -47,9 +47,10 @@
   </style>
 </head>
 <body>
-
+  <div id="gnb"></div>
+  
   <label id="paper">빅데이터과, 2402198, 이진서<br></label>
-
+  
   <div class="keyboard">
     <div class="숫자">
       <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button>
@@ -73,6 +74,13 @@
   </div>
 
   <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+         document.getElementById('gnb').innerHTML = data;
+      });
+    
+    
     const paper = document.getElementById('paper');
   
     document.addEventListener('keydown', (event) => {
