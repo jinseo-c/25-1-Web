@@ -47,7 +47,6 @@
   </style>
 </head>
 <body>
-  <div id="gnb"></div>
   
   <label id="paper">빅데이터과, 2402198, 이진서<br></label>
   
@@ -74,12 +73,6 @@
   </div>
 
   <script>
-    fetch('nav.html')
-      .then(res => res.text())
-      .then(data => {
-         document.getElementById('gnb').innerHTML = data;
-      });
-    
     
     const paper = document.getElementById('paper');
   
