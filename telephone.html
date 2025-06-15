@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>유선전화기</title>
+    <title>전화기</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .center-content {
@@ -13,6 +13,29 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } 
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        .add{
+            width: 100%;
+            display: block;
+            padding-left: 550px;
+            box-sizing: border-box;
+        }
+    
+        .add h2,
+        .add p {
+            text-align: left;
         }
 
         .phone {
@@ -90,25 +113,47 @@
         </ul>
     </nav>
     <main class="center-content">
-        <div class="phone">
-            <div id="display" class="display"></div>
-            <div class="buttons">
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">*</button>
-                <button class="button">0</button>
-                <button class="button">#</button>
+        <div class="calculator-container">
+            <h1>전화기</h1>
+            <br><hr class="full-hr"/><br>
+            <br><br>
+            <img class="typewriter" src="images/전화기image.png" alt="전화기" />
+            <br><br><br><br>
+            <p>유선전화기의 구성을 구현해보았습니다!</p>
+            <p>아래에서 전화기를 실행해볼 수 있습니다.</p>
+
+            <br><br>
+            <p style="font-size: 2em; animation: bounce 1s infinite;">↓</p>
+    
+            <br><br><br><br>
+            <div class="phone">
+                <div id="display" class="display"></div>
+                <div class="buttons">
+                    <button class="button">1</button>
+                    <button class="button">2</button>
+                    <button class="button">3</button>
+                    <button class="button">4</button>
+                    <button class="button">5</button>
+                    <button class="button">6</button>
+                    <button class="button">7</button>
+                    <button class="button">8</button>
+                    <button class="button">9</button>
+                    <button class="button">*</button>
+                    <button class="button">0</button>
+                    <button class="button">#</button>
+                </div>
+                <div class="controls">
+                    <button class="clear-btn" id="clear">Clear</button>
+                </div>
             </div>
-            <div class="controls">
-                <button class="clear-btn" id="clear">Clear</button>
-            </div>
+            <br><br><br><br>
+            <section class="add">
+              <h2>실행 도우미</h2>
+              <p>- keyboard를 통해서도 계산이 가능합니다.</p>
+              <p>- keyboard를 이용할 경우 'clear'는 Backspace 입니다.</p>
+              <p>- 번호를 누르고 잠시 기다리면, 전화가 연결됩니다..</p>
+            </section>
+            <br><br><br><br><br><br>
         </div>
     </main>
     
