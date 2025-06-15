@@ -5,7 +5,7 @@
   <title>한/영 타자기</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
+    .center-content {
       background-color: #f0f0f0;
       text-align: center;
     }
@@ -94,53 +94,55 @@
       <li><a href="telephone">전화기</a></li>
     </ul>
   </nav>
+
+  <main class="center-content">
+    <label id="paper">빅데이터과, 2402198, 이진서<br></label>
+
+    <div class="keyboard_eng active" id="eng">
+      <div class="숫자">
+        <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
+      </div>
+      <div class="영어1">
+        <label>q</label><label>w</label><label>e</label><label>r</label>
+        <label>t</label><label>y</label>
+        <label>u</label><label>i</label><label>o</label><label>p</label>
+      </div>
+      <div class="영어2">
+        <label>a</label><label>s</label><label>d</label><label>f</label>
+        <label>g</label><label>h</label>
+        <label>j</label><label>k</label><label>l</label>
+      </div>
+      <div class="영어3">
+        <label>z</label><label>x</label><label>c</label><label>v</label>
+        <label>b</label><label>n</label>
+        <label>m</label><label>,</label><label id="toggleKey">.</label>
+        <label id="mode-label-eng">영</label>
+      </div>
+    </div>
+
+    <div class="keyboard_kor" id="kor">
+      <div class="숫자">
+        <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
+      </div>
+      <div class="한글1">
+        <label>ㅂ</label><label>ㅈ</label><label>ㄷ</label><label>ㄱ</label>
+        <label>ㅅ</label><label>ㅛ</label>
+        <label>ㅕ</label><label>ㅑ</label><label>ㅐ</label><label>ㅔ</label>
+      </div>
+      <div class="한글2">
+        <label>ㅁ</label><label>ㄴ</label><label>ㅇ</label><label>ㄹ</label>
+        <label>ㅎ</label><label>ㅗ</label>
+        <label>ㅓ</label><label>ㅏ</label><label>ㅣ</label>
+      </div>
+      <div class="한글3">
+        <label>ㅋ</label><label>ㅌ</label><label>ㅊ</label><label>ㅍ</label>
+        <label>ㅠ</label><label>ㅜ</label>
+        <label>ㅡ</label><label>,</label><label id="toggleKey">.</label>
+        <label id="mode-label-kor">한</label>
+      </div>
+    </div>
+  </main>
   
-  <label id="paper">빅데이터과, 2402198, 이진서<br></label>
-
-  <div class="keyboard_eng active" id="eng">
-    <div class="숫자">
-      <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
-    </div>
-    <div class="영어1">
-      <label>q</label><label>w</label><label>e</label><label>r</label>
-      <label>t</label><label>y</label>
-      <label>u</label><label>i</label><label>o</label><label>p</label>
-    </div>
-    <div class="영어2">
-      <label>a</label><label>s</label><label>d</label><label>f</label>
-      <label>g</label><label>h</label>
-      <label>j</label><label>k</label><label>l</label>
-    </div>
-    <div class="영어3">
-      <label>z</label><label>x</label><label>c</label><label>v</label>
-      <label>b</label><label>n</label>
-      <label>m</label><label>,</label><label id="toggleKey">.</label>
-      <label id="mode-label-eng">영</label>
-    </div>
-  </div>
-
-  <div class="keyboard_kor" id="kor">
-    <div class="숫자">
-      <label>1</label><label>2</label><label>3</label><label>4</label><label>5</label><label>6</label><label>7</label><label>8</label><label>9</label><label>0</label>
-    </div>
-    <div class="한글1">
-      <label>ㅂ</label><label>ㅈ</label><label>ㄷ</label><label>ㄱ</label>
-      <label>ㅅ</label><label>ㅛ</label>
-      <label>ㅕ</label><label>ㅑ</label><label>ㅐ</label><label>ㅔ</label>
-    </div>
-    <div class="한글2">
-      <label>ㅁ</label><label>ㄴ</label><label>ㅇ</label><label>ㄹ</label>
-      <label>ㅎ</label><label>ㅗ</label>
-      <label>ㅓ</label><label>ㅏ</label><label>ㅣ</label>
-    </div>
-    <div class="한글3">
-      <label>ㅋ</label><label>ㅌ</label><label>ㅊ</label><label>ㅍ</label>
-      <label>ㅠ</label><label>ㅜ</label>
-      <label>ㅡ</label><label>,</label><label id="toggleKey">.</label>
-      <label id="mode-label-kor">한</label>
-    </div>
-  </div>
-
   <footer>
     <p>&copy; 2025 Js Website. All rights reserved.</p>
     <p>한양여자대학교 빅데이터과 2402198 이진서</p>
