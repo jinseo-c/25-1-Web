@@ -19,6 +19,41 @@
       height: auto;  /* 비율 유지 */
       border-radius: 8px; /* 둥근 모서리 */
     }
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px;
+      gap: 20px;
+      background-color: #f5f5f5;
+    }
+    .card {
+      width: 220px;
+      height: 280px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      object-fit: cover;
+    }
+    .card p {
+      margin: 15px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -46,6 +81,29 @@
     <p>그리고, 유선전화기 화면까지!</p>
     <br>
     <p>이렇게 네 가지 프로그램을 실행해 볼 수 있습니다~</p>
+    <br>
+    
+    <div class="container">
+      <a href="https://jinseo-c.github.io/25-1-Web/eng-typewriter" class="card">
+        <img src="영문 타자기.png" alt="영문 타자기" />
+        <p>영문 타자기</p>
+      </a>
+      
+      <a href="https://jinseo-c.github.io/25-1-Web/kor-eng-typewriter" class="card">
+        <img src="한영 타자기.png" alt="한/영 타자기" />
+        <p>한/영 타자기</p>
+      </a>
+
+      <a href="https://jinseo-c.github.io/25-1-Web/Calculator" class="card">
+        <img src="계산기.png" alt="계산기" />
+        <p>계산기</p>
+      </a>
+
+      <a href="https://jinseo-c.github.io/25-1-Web/telephone" class="card">
+        <img src="전화기.png" alt="전화기" />
+        <p>전화기</p>
+      </a>
+    </div>
   </main>
 
   <footer>
