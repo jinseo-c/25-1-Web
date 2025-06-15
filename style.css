@@ -38,13 +38,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.full-hr {
-  width: 90vw;             
-  eight: 1px;      
-  border: none;       
-  background-color: #9a9a9a;
-}
-
 main {
   flex: 1;
   padding: 20px;
