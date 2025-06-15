@@ -46,3 +46,9 @@ footer {
   padding: 15px 0;
   font-size: 14px;
 }
+
+.footer-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
