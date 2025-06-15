@@ -8,6 +8,10 @@ body {
   flex-direction: column;
 }
 
+h1, h2, p {
+  text-align: center;
+}
+
 nav {
   background-color: #333;
   padding: 10px;
