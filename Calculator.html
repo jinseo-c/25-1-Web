@@ -5,10 +5,12 @@
     <title>JS적용 계산기</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        .center-content {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
         }
 
@@ -34,7 +36,6 @@
             position: relative;
         }
 
-        /* 커서 깜빡임 */
         .display::after {
             content: '|';
             display: inline-block;
@@ -110,35 +111,36 @@
             <li><a href="telephone">전화기</a></li>
         </ul>
     </nav>
+    <main class="center-content">
+        <div class="calculator">
+            <div id="display" class="display"></div>
+            <div class="buttons">
+                <button class="button other" data-value="AC">AC</button>
+                <button class="button other" data-value="CE">CE</button>
+                <button class="button other" data-value="+/-">+/-</button>
+                <button class="button operator" data-value="/">÷</button>
 
-    <div class="calculator">
-        <div id="display" class="display"></div>
-        <div class="buttons">
-            <button class="button other" data-value="AC">AC</button>
-            <button class="button other" data-value="CE">CE</button>
-            <button class="button other" data-value="+/-">+/-</button>
-            <button class="button operator" data-value="/">÷</button>
+                <button class="button number" data-value="7">7</button>
+                <button class="button number" data-value="8">8</button>
+                <button class="button number" data-value="9">9</button>
+                <button class="button operator" data-value="*">×</button>
 
-            <button class="button number" data-value="7">7</button>
-            <button class="button number" data-value="8">8</button>
-            <button class="button number" data-value="9">9</button>
-            <button class="button operator" data-value="*">×</button>
+                <button class="button number" data-value="4">4</button>
+                <button class="button number" data-value="5">5</button>
+                <button class="button number" data-value="6">6</button>
+                <button class="button operator" data-value="-">-</button>
 
-            <button class="button number" data-value="4">4</button>
-            <button class="button number" data-value="5">5</button>
-            <button class="button number" data-value="6">6</button>
-            <button class="button operator" data-value="-">-</button>
+                <button class="button number" data-value="1">1</button>
+                <button class="button number" data-value="2">2</button>
+                <button class="button number" data-value="3">3</button>
+                <button class="button operator" data-value="+">+</button>
 
-            <button class="button number" data-value="1">1</button>
-            <button class="button number" data-value="2">2</button>
-            <button class="button number" data-value="3">3</button>
-            <button class="button operator" data-value="+">+</button>
-
-            <button class="button number" data-value="0">0</button>
-            <button class="button number" data-value=".">.</button>
-            <button class="button equals" id="equals">=</button>
+                <button class="button number" data-value="0">0</button>
+                <button class="button number" data-value=".">.</button>
+                <button class="button equals" id="equals">=</button>
+            </div>
         </div>
-    </div>
+    </main>
     <footer>
         <p>&copy; 2025 Js Website. All rights reserved.</p>
         <p>한양여자대학교 빅데이터과 2402198 이진서</p>
