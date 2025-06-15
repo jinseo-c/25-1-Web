@@ -5,6 +5,28 @@
   <title>영문 타자기</title>
   <link rel="stylesheet" href="style.css">
   <style> 
+    .center-content {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .add{
+      width: 100%;
+      display: block;
+      padding-left: 550px;
+      box-sizing: border-box;
+    }
+    
+    .add h2,
+    .add p {
+      text-align: left;
+    }
+    
     label {
       display: block;
       width: 500px;
@@ -60,28 +82,49 @@
   
   <br><br>
   <main class="center-content">
-    <label id="paper">빅데이터과, 2402198, 이진서<br></label>
+    <div class="calculator-container">
+      <h1>영문 타자기</h1>
+      <br><hr class="full-hr"/><br>
+      <br><br>
+      <img class="typewriter" src="images/흑백타자기.png" alt="영문 타자기" />
+      <br><br><br><br>
+      <p>영어를 display에 적을 수 있습니다!</p>
+      <p>아래에서 영문 타자기를 실행해볼 수 있습니다.</p>
 
-    <div class="keyboard">
-      <div class="숫자">
-        <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button>
-        <button data-key="6">6</button><button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="0">0</button>
+      <br><br>
+      <p style="font-size: 2em; animation: bounce 1s infinite;">↓</p>
+    
+      <br><br><br><br>
+      <label id="paper">빅데이터과, 2402198, 이진서<br></label>
+
+      <div class="keyboard">
+        <div class="숫자">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button><button data-key="4">4</button><button data-key="5">5</button>
+          <button data-key="6">6</button><button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button><button data-key="0">0</button>
+        </div>
+        <div class="영어1">
+          <button data-key="q">q</button><button data-key="w">w</button><button data-key="e">e</button><button data-key="r">r</button>
+          <button data-key="t">t</button><button data-key="y">y</button>
+          <button data-key="u">u</button><button data-key="i">i</button><button data-key="o">o</button><button data-key="p">p</button>
+        </div>
+        <div class="영어2">
+          <button data-key="a">a</button><button data-key="s">s</button><button data-key="d">d</button><button data-key="f">f</button>
+          <button data-key="g">g</button><button data-key="h">h</button>
+          <button data-key="j">j</button><button data-key="k">k</button><button data-key="l">l</button><button data-key=";">;</button>
+        </div>
+        <div class="영어3">
+          <button data-key="z">z</button><button data-key="x">x</button><button data-key="c">c</button><button data-key="v">v</button>
+          <button data-key="b">b</button><button data-key="n">n</button>
+          <button data-key="m">m</button><button data-key=",">,</button><button data-key=".">.</button><button data-key="/">/</button>
+        </div>
       </div>
-      <div class="영어1">
-        <button data-key="q">q</button><button data-key="w">w</button><button data-key="e">e</button><button data-key="r">r</button>
-        <button data-key="t">t</button><button data-key="y">y</button>
-        <button data-key="u">u</button><button data-key="i">i</button><button data-key="o">o</button><button data-key="p">p</button>
-      </div>
-      <div class="영어2">
-        <button data-key="a">a</button><button data-key="s">s</button><button data-key="d">d</button><button data-key="f">f</button>
-        <button data-key="g">g</button><button data-key="h">h</button>
-        <button data-key="j">j</button><button data-key="k">k</button><button data-key="l">l</button><button data-key=";">;</button>
-      </div>
-      <div class="영어3">
-        <button data-key="z">z</button><button data-key="x">x</button><button data-key="c">c</button><button data-key="v">v</button>
-        <button data-key="b">b</button><button data-key="n">n</button>
-        <button data-key="m">m</button><button data-key=",">,</button><button data-key=".">.</button><button data-key="/">/</button>
-      </div>
+      <br><br><br><br>
+      <section class="add">
+        <h2>실행 도우미</h2>
+        <p>- keyboard typing을 통해서 입력이 가능합니다.</p>
+        <p>- clear를 원할 경우 새로고침을 하여 display를 지웁니다.</p>
+      </section>
+      <br><br><br><br><br><br>
     </div>
   </main>
   
