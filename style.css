@@ -58,35 +58,12 @@ footer {
   font-size: 14px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.footer-left,
-.footer-right {
-  flex: 1;
-  min-width: 300px;
-  margin: 0 500px;
-}
-
-.footer-left p,
-.footer-right p {
-  margin: 5px 0;
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer-image {
   margin-top: 10px;
   width: 150px;
   height: auto;
-}
-
-.footer-right a {
-  text-decoration: none;
-}
-
-.footer-right a:hover {
-  text-decoration: underline;
 }
