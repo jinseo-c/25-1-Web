@@ -53,13 +53,39 @@ main {
 footer {
   background-color: #333;
   color: white;
+  padding: 20px 50px;
   text-align: center;
-  padding: 15px 0;
   font-size: 14px;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  max-width: 45%;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 5px 0;
+}
+
 .footer-image {
-  width: 200px;
+  margin-top: 10px;
+  width: 150px;
   height: auto;
-  border-radius: 8px;
+}
+
+.footer-right a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
 }
