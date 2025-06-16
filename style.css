@@ -11,31 +11,54 @@ body {
 h1, h2, p {
   text-align: center;
 }
-
-nav {
-  background-color: #333;
-  padding: 10px;
-}
-
-nav ul {
+.gnb ul {
   list-style: none;
-  display: flex;
-  justify-content: flex-end;
   margin: 0;
   padding: 0;
+  display: flex;
+  background-color: #333;
 }
 
-nav li {
-  margin-right: 40px;
+.gnb > ul > li {
+  position: relative;
 }
 
-nav a {
+.gnb a {
+  display: block;
+  padding: 14px 20px;
   color: white;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.gnb a:hover {
+  background-color: #444;
+}
+
+/* 드롭다운 숨기기 */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #555;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+/* 드롭다운 항목 스타일 */
+.dropdown-menu li a {
+  padding: 10px 15px;
+  color: white;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #666;
+}
+
+/* 마우스 호버 시 드롭다운 보이기 */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 main {
