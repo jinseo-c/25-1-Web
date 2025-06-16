@@ -67,6 +67,7 @@ footer {
 
 .footer-left,
 .footer-right {
+  max-width: 45%;
   margin: 0 300px;
 }
 
